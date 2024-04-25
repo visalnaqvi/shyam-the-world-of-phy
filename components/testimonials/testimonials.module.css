@@ -1,0 +1,7 @@
+.column{
+    width: 60%;
+}
+
+.column:first-child{
+    width: 40%;
+}
