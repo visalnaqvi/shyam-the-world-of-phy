@@ -18,8 +18,17 @@
     font-size: 1.3rem;
     margin-top: 3px;
     margin-right: 10px;
+    width: 10px;
 }
 
+.line{
+    margin-left: 10px;
+    width: 200px;
+}
+
+.marginLeft{
+    margin-left: 50px;
+}
 @media only screen and (max-width:1300px){
     .wrapper{
         width: 95%;
@@ -55,5 +64,15 @@
         margin: 0px;
         margin-bottom: 30px;
 
+    }
+}
+
+@media only screen and (max-width:400px){
+    .marginLeft{
+        margin-left: 0;
+    }
+
+    .column{
+        flex-direction: column !important;
     }
 }

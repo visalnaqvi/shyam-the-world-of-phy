@@ -1,11 +1,9 @@
 import ImageCard from "@/components/cards/imageCard/imageCard"
-import CarouselComp from "@/components/carousel/carousel"
 import services from "../data/services.js"
 import features from "../data/features.js"
 // import heroVideo from "../public/gallary/hero.mp4"
 // import heroVideo2 from "../public/gallary/hero2.mp4"
 import testi from "../data/testimonials.js"
-import Map from "../components/map/map.js"
 import longBanner from "../public/backgroundImages/long_banner.png"
 import SingleImage from "../components/carousel/singleImage.js"
 import background from "../public/sliders/homePageSlider/desktop/slider_1.png"
@@ -15,10 +13,8 @@ import Head from "next/head.js"
 import Image from "next/image.js"
 
 
-import TestimonialCard from "@/components/cards/testimonialCard/testimonialCard.js"
 import { useRouter } from "next/navigation.js"
 import VideoHero from "@/components/videoHero/videoHero.js"
-import Gallary from "@/components/gallary/gallary.js"
 import Testimonials from "@/components/testimonials/testimonials.js"
 import WhyUs from "@/components/whyUs/whyUs.js"
 export default function Home() {
@@ -31,7 +27,7 @@ const router = useRouter();
    
     <div>
        <Head>
-      <title>Webiste and Web Apps Service in Noida</title>
+      <title>Shyam The World of Physics | Home</title>
     </Head>
     
         <SingleImage url={[background , background_mb]} /> 
@@ -39,13 +35,12 @@ const router = useRouter();
         <div className="margin">
           <div className="body-wrapper justify-between">
             <h2 className="subHeading">Our foundation</h2>
-            <a className="contact-button" href="tel:+919993005825"><button className="primary-btn blue">Contact Us On: +919993005825</button></a>
+            <a className="contact-button" href="tel:+917314020339"><button className="primary-btn blue">Contact Us On: +917314020339</button></a>
           </div>
           
-            <p className="content">At InfiniteWeb Solutions, we believe in the power of limitless creativity and innovation to shape the digital landscape. Our foundation is built on a commitment to excellence, integrity, and client satisfaction. We are dedicated to crafting immersive web experiences that transcend expectations, empowering businesses to thrive in the digital realm. With a team of passionate experts, we harness the latest technologies and design trends to unlock infinite possibilities for our clients. From concept to execution, we are your partners in success, providing tailored solutions that elevate your online presence and drive measurable results. Welcome to a world of endless opportunities with InfiniteWeb Solutions.</p>
+            <p className="content">Welcome to Shyam The World of Physics, a leading destination for exceptional physics coaching. Established with a vision to nurture the next generation of physics enthusiasts and achievers, we pride ourselves on our commitment to excellence and student success. Led by Director Neelesh Kumar Gupta, an esteemed educator and mentor, our institute offers a comprehensive curriculum, expert guidance, and a supportive learning environment. Whether you&apos;re preparing for competitive exams or aiming to deepen your understanding of physics, Shyam Institute is dedicated to empowering you to achieve your goals and unlock your full potential in the fascinating world of physics.</p>
            <div className="body-wrapper justify-start">
-            <button className="primary-btn blue" onClick={()=>{router.push("/recentProjects")}} style={{marginRight:"10px"}}>Explore Recent Projects</button>
-            <button className="primary-btn blue" onClick={()=>{router.push("/login")}} style={{marginRight:"10px"}}>Request a Callback</button>
+            <button className="primary-btn blue" onClick={()=>{router.push("/ourCourses")}} style={{marginRight:"10px"}}>View Our Courses</button>
             </div>
             <div style={{position:"relative", width:"100%", height:`${size.width<800?"200px":"600px"}`}}>
             <Image onClick={()=>{router.push("/login")}} src={longBanner} fill={true} style={{objectFit:"contain"}} alt="some"/>

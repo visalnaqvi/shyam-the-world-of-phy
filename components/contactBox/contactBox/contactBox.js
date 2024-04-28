@@ -2,9 +2,14 @@ import Link from "next/link";
 import styles from "./contactBox.module.css"
 import { useRouter } from "next/navigation";
 import { FaFacebook, FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa";
+import AboveFooter from "@/components/aboveFooter/aboverFooter";
 const ContactBox = ()=>{
     const router = useRouter()
     return(
+        <>
+        <div className="margin">
+        <AboveFooter />
+        </div>
         <div className={`body-wrapper ${styles.wrapper}`}>
             <div className={styles.contactBoxSection}>
                 <h3 style={{marginTop:0}} className="subHeading">Contact Us for more information</h3>
@@ -36,6 +41,7 @@ const ContactBox = ()=>{
                 </div>
             </div>
         </div>
+        </>
     );
 }
 

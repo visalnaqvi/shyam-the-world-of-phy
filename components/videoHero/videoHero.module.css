@@ -44,3 +44,16 @@
         width: 100%;
     }
 }
+
+@media only screen and (max-width:500px){
+    .wrapper{
+        padding: 10px;
+    }
+
+    .column{
+        padding: 0;
+    }
+    .column:last-child{
+       padding-top: 20px;
+    }
+}

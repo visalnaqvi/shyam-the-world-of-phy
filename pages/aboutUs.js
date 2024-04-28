@@ -5,7 +5,7 @@ const AboutUsPage = () => {
     return( 
         <>
         <Head>
-        <title>About Us | Webiste and Web Apps</title>
+        <title>About Us | Shyam The World of Physics</title>
       </Head>
         <AboutUs></AboutUs></>
          );

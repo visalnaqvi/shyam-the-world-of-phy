@@ -1,0 +1,36 @@
+.wrap{
+    background-color: var(--primary-blue);
+    box-shadow: 0px 8px 10px #00000060;
+    position: fixed;
+    top: 50%;
+    right: 0px;
+    z-index: 11;
+}
+
+.span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:15px;
+    font-size: 1.5em;
+    color: #fff;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.span:hover{
+    background-color: #fff;
+    color: var(--primary-blue);
+}
+
+@media only screen and (max-width:450px){
+    .wrap{
+        bottom: 10px;
+        top: unset;
+    }
+
+    .span{
+        font-size: 1em;
+    }
+
+}

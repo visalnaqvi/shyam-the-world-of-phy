@@ -8,8 +8,8 @@ const SingleImage = ({url})=>{
 
     return(
        <>{size.width && <div className="backgroundImgWrapper">
-            {size.width>615 ? <Image onClick={()=>{router.push("/login")}} className="backgroundImg" fill={false} height={450} style={{objectFit: "cover" , objectPosition:"left"}} src={url[0]} alt="iraq ziyarat packages" />
-            :<Image onClick={()=>{router.push("/login")}} className="backgroundImg" height={400} style={{objectFit: "cover" , objectPosition:"left"}} src={url[1]} alt="iraq ziyarat packages" />}
+            {size.width>615 ? <Image  className="backgroundImg" fill={false} height={450} style={{objectFit: "cover" , objectPosition:"left"}} src={url[0]} alt="home" />
+            :<Image className="backgroundImg" width={800} height={350} style={{objectFit: "contain" , objectPosition:"top"}} src={url[1]} alt="home" />}
             </div>   }  </>     
     )
 }

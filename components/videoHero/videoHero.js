@@ -4,32 +4,18 @@ import { useRouter } from "next/navigation"
 import { useWindowSize } from "@uidotdev/usehooks";
 
 import heroImg from "../../public/gallary/video_hero.jpeg"
-import one from "../../public/gallary/1.jpeg"
-import two from "../../public/gallary/2.jpeg"
-import three from "../../public/gallary/3.jpeg"
-import four from "../../public/gallary/4.jpeg"
+import one from "../../public/gallary/1.png"
+import two from "../../public/gallary/2.png"
+import three from "../../public/gallary/3.png"
+import four from "../../public/gallary/4.png"
 import Image from "next/image"
-import CardGallary from "../gallary/cardGallary/cardGallary";
+import CardGallary from "../cards/imgCards/ImgCards";
 const VideoHero = ()=>{
     const router = useRouter()
     const size = useWindowSize();
-    const awards = [{
-        img:one,
-        text:"University Gold Medallist (Awarded By Governer MP)"
-    },
-{
-    img:two,
-    text:"Best Student Awarded in  MSc Physics"
-},
-{
-    img:three,
-    text:"President of Physics Department Holkar Science College"
-},
-{
-    img:four,
-    text:"Three Year College Topper in BSc ( Career College Bhopal)"
-}]
+    const awards = [one, two , three , four];
     return (
+        <div>
         <div  className={styles.wrapper}>
         <div className={`body-wrapper`}>
         <div className={styles.column}>
@@ -44,19 +30,19 @@ const VideoHero = ()=>{
             <p className={styles.phone}>Connect with us Now</p>
         </div></a>
         <div className="body-wrapper justify-start">
-            <button style={{marginTop:"20px",padding:"20px" , fontSize:"20px"}} className="primary-btn blue" onClick={()=>{router.push("/recentProjects")}}>Explore Recent Projects</button>
+            <button style={{marginTop:"20px",padding:"20px" , fontSize:"20px"}} className="primary-btn blue" onClick={()=>{router.push("/ourCourses")}}>View Courses</button>
             </div>
         </div>
-        <div onClick={()=>{
-            window.open("https://stargateeducation.com", '_blank');
-        }} className={styles.column}>
+        <div className={styles.column}>
             {size.width && size.width >500 ?<Image src={heroImg} style={{objectFit:"contain" , borderRadius:"20px" , boxShadow:"0px 10px 20px #00000040"}} width={"400"} alt="something" />:
             <Image src={heroImg} style={{objectFit:"contain" , borderRadius:"10px" , boxShadow:"0px 10px 20px #00000040"}} width={"300"} alt="something" />}
             <p className="subHeading center" style={{margin:"0"}}>Director Neelesh Kumar Gupta</p>
       </div>
 
       </div>
-      <CardGallary awards={awards} />
+    
+      </div>
+        <CardGallary awards={awards} />
       </div>
     )
 }

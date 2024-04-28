@@ -1,87 +1,67 @@
-import ContactCard from "../cards/contactcard/ContactCard.js";
-import Gallary from "../gallary/gallary.js";
-import Map from "../map/map.js";
 import styles from "./recentProjects.module.css"
-import agecourses from "../../public/gallary/agecourses.png"
-import alazeem from "../../public/gallary/alazeem.png"
-import dhyeyaias from "../../public/gallary/dhyeyaias.png"
-import jshah from "../../public/gallary/jshah.png"
-import electropack from "../../public/gallary/electropack.png"
-import marvelsuperhero from "../../public/gallary/marvelsuperhero.png"
-import nninteriors from "../../public/gallary/nninteriors.png"
-import portfolio from "../../public/gallary/portfolio.png"
-import stargate from "../../public/gallary/stargate_sq.png"
+
+import one from "../../public/courses/1.png"
+import two from "../../public/courses/2.png"
+import three from "../../public/courses/3.png"
+import four from "../../public/courses/4.png"
+import five from "../../public/courses/5.png"
+import six from "../../public/courses/6.png"
+import seven from "../../public/courses/7.png"
+import eight from "../../public/courses/8.png"
+import nine from "../../public/courses/9.png"
+
+import onemb from "../../public/coursesmb/1.png"
+import twomb from "../../public/coursesmb/2.png"
+import threemb from "../../public/coursesmb/3.png"
+import fourmb from "../../public/coursesmb/4.png"
+import fivemb from "../../public/coursesmb/5.png"
+import sixmb from "../../public/coursesmb/6.png"
+import sevenmb from "../../public/coursesmb/7.png"
+import eightmb from "../../public/coursesmb/8.png"
+import ninemb from "../../public/coursesmb/9.png"
+
+import Image from "next/image.js";
+import { useState } from "react";
+import AboveFooter from "../aboveFooter/aboverFooter"
+
 const InteriorProjects = () => {
-    const gallaryData = [{
-        src:agecourses,
-        link:"https://e-commerce-50904.web.app/",
-        name:"Age Courses"
-    } ,{
-        src:alazeem,
-        link:"https://alazeemtravels.com/",
-        name:"Al Azeem Tours and Travels"
-    } , {
-        src:dhyeyaias,
-        link:"https://dhyeyaiaslaxminagar.com/",
-        name:"Dhyeya IAS"
-    } , {
-        src:jshah,
-        link:"https://jkshahclasses.com/",
-        name:"JK Shah Classes"
-    } , {
-        src:stargate,
-        link:"https://stargateeducation.com/",
-        name:"Stargate Education"
-    } , {
-        src:electropack,
-        link:"https://nninterior.com/",
-        name:"Electropack Engineers"
-    },{
-        src:nninteriors,
-        link:"https://nninteriors.vercel.app/",
-        name:"NN Interiors"
-    } , {
-        src:portfolio,
-        link:"https://nurul-portfolio.vercel.app/",
-        name:"Portfolio Website"
-    } , {
-        src:marvelsuperhero,
-        link:"https://marvel-super-hero-hunter-app.vercel.app/",
-        name:"Marvel SuperHero Site"
-    } ]
+
+    const [isOnline , setIsOnline] = useState(false)
+    const [active , setActive] = useState("offline")
+
+    const imagesOffline = [one , two , three , four , five , six , seven , eight , nine]
+    const imagesOnline = [onemb , twomb , threemb , fourmb , fivemb , sixmb , sevenmb , eightmb , ninemb]
+    
     return ( <>
         <div className={`${styles.slide} ${styles.contactus} bg-class flex-class`}>
             
             <div className={styles.content}>
-                <p className={styles.heading}>Our Recent Projects</p>
-                <p className={styles.text}>Explore Our Recent Projects: Where Innovation Meets Excellence, Bringing Ideas to Life with Flair and Precision.</p>
+                <p className={styles.heading}>Our Courses</p>
+                <p className={styles.text}>Empowering Minds, Elevating Potential: Explore Our Comprehensive Physics Courses for Academic Excellence and Beyond.</p>
             </div>
             <div className={styles.shade}></div>
         </div>
         <div className="margin">
-       
-       <Gallary images={gallaryData} />
-       <br></br>
-       
-        <h2 className="subHeading">Contact Electropack Engineers</h2>
-        <p className="content">Please don&apos;t hesitate to contact us by phone or by using the form below. We are ready to address any questions or concerns you may have about our process, partners, or any issues you may be experiencing.</p>
-       
-       <br></br>
-        <div className="body-wrapper">
-        <button className="primary-btn blue">Request a callback</button>
+        <h2 className="subHeading center">Our Courses</h2>
+        <div className={`${styles.tabWrapper} body-wrapper`}>
+            <div id="offline" onClick={()=>{
+                setIsOnline(false)
+                setActive("offline")
+            }} className={`${styles.tab} ${active=="offline" && styles.active}`}>Offline Courses</div>
+            <div onClick={()=>{
+                setIsOnline(true)
+                setActive("online")
+                }} className={`${styles.tab} ${active=="online" && styles.active}`}>Online Courses</div>
         </div>
-       <br></br>
-       <br></br>
-        <div className={`${styles.cardholder} flex-class wrap`} style={{width:"100%", flexWrap:"wrap"}}>
-            <ContactCard heading="Timmings" line1="Monday - Saturday" line2="10 A.M. to 7 A.M."></ContactCard>
-            <ContactCard heading="Address" line1="18B Navratan Bagh," line2="Karnatwat Pan Center Ke Upar, Near Sant Paul School Geeta Bhawan, Indore"></ContactCard>
-            <ContactCard heading="Contact" line1="+919811042458" line2="+919811136987"></ContactCard>
+       <div className={`${styles.imgwrapper} body-wrapper`}>
+        {
+            !isOnline ? imagesOffline.map((img , i)=>(
+                <div key={i} className={styles.img}><Image style={{borderRadius:"10px" , boxShadow:"10px 10px 20px #00000040"}} src={img} alt="course" height={500} width={500}/></div>
+            )) : imagesOnline.map((img , i)=>(
+                <div key={i} className={styles.img}><Image style={{borderRadius:"10px" , boxShadow:"10px 10px 20px #00000040"}} src={img} alt="course" height={500} width={500}/></div>
+            ))
+        }
         </div>
-       
-        {/* <Map></Map> */}
-        <br></br>
-        <br></br>
-    
         </div>
     </> );
 }

@@ -5,17 +5,19 @@ import ContactBox from "@/components/contactBox/contactBox/contactBox"
 import { SessionProvider } from "next-auth/react"
 import Head from "next/head.js"
 import Script from "next/script"
+import SocialWidget from "@/components/contactBox/sidewidget/sideWidget"
 
 const noAuthRoutes = ['/welcome', '/newLogin', '/register'];
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   return (
     <SessionProvider session={session}>
       <Head>
-      <link rel="icon" href="/favicon.png" />
+      <link rel="icon" href="/favicon.ico" />
       </Head>
  
 
     <NavBar />
+    <SocialWidget />
     <main>
       <Component {...pageProps} />
     </main>

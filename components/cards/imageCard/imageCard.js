@@ -16,22 +16,22 @@ const ImageCard = ({data})=>{
             <div className={`${styles.imageCardSection} ${styles.content}`}>
                 <h2 style={{marginTop:'0'}}className='subHeading'>{data.heading}</h2>
               {!data.column1 ?  <p className='content'>{data.content}</p>
-               : <div className='body-wrapper justify-start items-start'>
+               : <div className={`${styles.column} body-wrapper justify-start items-start`}>
                     <div>
                         {
                             data.column1.map((line , i)=>(
                                 <div key={i} className='body-wrapper justify-start'>
-                                    <p className={styles.icon}><FaCheckCircle /></p>
-                                    <p>{line}</p></div>
+                                    <span className={styles.icon}><FaCheckCircle /></span>
+                                    <p className={styles.line}>{line}</p></div>
                             ))
                         }
                     </div>
-                    <div style={{marginLeft:"50px"}}>
+                    <div className={styles.marginLeft}>
                         {
                             data.column2.map((line , i)=>(
                                 <div key={i} className='body-wrapper justify-start'>
-                                    <p className={styles.icon}><FaCheckCircle /></p>
-                                    <p>{line}</p></div>
+                                    <span className={styles.icon}><FaCheckCircle /></span>
+                                    <p className={styles.line}>{line}</p></div>
                             ))
                         }
                     </div>

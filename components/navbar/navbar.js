@@ -28,14 +28,14 @@ const NavBar = () => {
             }} className={styles.hamMenu}>
             {isVisible ? <GiCancel style={{pointerEvents:"none"}} /> :<GiHamburgerMenu style={{pointerEvents:"none"}} />}
             </div>
-                {size.width> 500 ?<Image src={logo} width={200} style={{objectFit:"contain"}} alt="al azeem logo" />:
+                {size.width> 500 ?<Image src={logo} width={220} style={{objectFit:"contain"}} alt="al azeem logo" />:
                 <Image src={logo} width={120} style={{objectFit:"contain"}} alt="al azeem logo" />}
                <div className={`${styles.mainMenu} ${!isVisible && styles.notVisible}`}>
                     <ul className="body-wrapper">
                     <li onClick={()=>{mbNav()
                         router.push("/")}}>Home</li>
                     <li className={styles.pointer} onClick={()=>{mbNav()
-                    router.push("/recentProjects")}}>Recent Projects</li>
+                    router.push("/ourCourses")}}>Our Courses</li>
                     <li onClick={()=>{mbNav()
                         router.push("/contactus")}}>Contact Us</li>
                     <li onClick={()=>{mbNav()
@@ -45,7 +45,7 @@ const NavBar = () => {
                 <div className={`${styles.w20} body-wrapper`}>
                     
                    
-                <button onClick={()=>{router.push("/login")}} className="primary-btn blue" style={{ marginTop: "0" , fontSize:"12px" }}>Get Callback</button>
+                {/* <button onClick={()=>{router.push("/login")}} className="primary-btn blue" style={{ marginTop: "0" , fontSize:"12px" }}>Get Callback</button> */}
 
                    
                 </div>
