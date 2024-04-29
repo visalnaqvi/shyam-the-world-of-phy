@@ -34,7 +34,7 @@ const ContactBox = ()=>{
                         <FaYoutube />
                     </div>
                     <div onClick={()=>{
-            window.open("https://wa.me/+9199930005825", '_blank');
+            window.open("https://wa.me/+919993005825", '_blank');
         }} className={styles.icons}>
                         <FaWhatsapp />
                     </div>

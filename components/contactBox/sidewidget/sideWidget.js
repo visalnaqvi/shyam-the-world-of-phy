@@ -13,7 +13,7 @@ const SocialWidget = () => {
             <FaYoutube />
           </span>
         </a>
-        <a rel="noreferrer" href="https://wa.me/+9199930005825" target="_blank" className={socialStyle.link}>
+        <a rel="noreferrer" href="https://wa.me/+919993005825" target="_blank" className={socialStyle.link}>
           <span className={socialStyle.span}>
             <FaWhatsapp />
           </span>

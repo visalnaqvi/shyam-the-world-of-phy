@@ -17,6 +17,7 @@ import { useRouter } from "next/navigation.js"
 import VideoHero from "@/components/videoHero/videoHero.js"
 import Testimonials from "@/components/testimonials/testimonials.js"
 import WhyUs from "@/components/whyUs/whyUs.js"
+import VideoBox from "@/components/videoBox/videoBox.js"
 export default function Home() {
 
 const size = useWindowSize();
@@ -38,7 +39,7 @@ const router = useRouter();
             <a className="contact-button" href="tel:+917314020339"><button className="primary-btn blue">Contact Us On: +917314020339</button></a>
           </div>
           
-            <p className="content">Welcome to Shyam The World of Physics, a leading destination for exceptional physics coaching. Established with a vision to nurture the next generation of physics enthusiasts and achievers, we pride ourselves on our commitment to excellence and student success. Led by Director Neelesh Kumar Gupta, an esteemed educator and mentor, our institute offers a comprehensive curriculum, expert guidance, and a supportive learning environment. Whether you&apos;re preparing for competitive exams or aiming to deepen your understanding of physics, Shyam Institute is dedicated to empowering you to achieve your goals and unlock your full potential in the fascinating world of physics.</p>
+            <p className="content">Welcome to Shyam The World of Physics, a premier destination for comprehensive coaching in NEET, JEE and other exams. With a mission to nurture the next generation of science enthusiasts and achievers, we offer expert guidance across all subjects. Led by Director Neelesh Kumar Gupta, our institute is committed to empowering students to excel in competitive exams and beyond.</p>
            <div className="body-wrapper justify-start">
             <button className="primary-btn blue" onClick={()=>{router.push("/ourCourses")}} style={{marginRight:"10px"}}>View Our Courses</button>
             </div>
@@ -57,23 +58,13 @@ const router = useRouter();
                 ))
               }
           </div>
-          
-          {/* <h2 className="subHeading center">Recent Interior Projects</h2>
-          <Gallary images={images_1}></Gallary>
-          <div className="body-wrapper">
-          <button style={{marginTop:"20px",padding:"20px" , fontSize:"20px"}} className="primary-btn blue" onClick={()=>{router.push("/interiorProjects")}}>Explore More Interior Projects</button>
-              </div>
-          <h2 className="subHeading center">Recent Exterior Projects</h2>
-          <Gallary images={images_2}></Gallary> */}
-          {/* <div className="body-wrapper">
-          <button style={{marginTop:"20px",padding:"20px" , fontSize:"20px"}} className="primary-btn blue" onClick={()=>{router.push("/exteriorProjects")}}>Explore More Exterior Projects</button>
-              </div> */}
 
          <Testimonials testi={testi} />
           <h2 className="subHeading center">Why to choose Us?</h2>
           <p className="content center">At Shyam Institute, we stand out as the premier destination for physics coaching for several reasons. Firstly, our esteemed faculty, led by Director Neelesh Kumar Gupta, brings a wealth of knowledge and experience, ensuring unparalleled guidance for every student. Secondly, our comprehensive curriculum is meticulously crafted to cover all facets of competitive physics exams, equipping students with the skills and confidence needed to excel. Lastly, our supportive learning environment fosters growth and encourages students to reach their full potential. With personalized attention, regular assessments, and interactive sessions, we pave the way for students to achieve their academic goals and beyond.</p>
         </div>
             <WhyUs />
+           <VideoBox />
         <div className="body-wrapper">
               {
                 features.map((d,i)=>(

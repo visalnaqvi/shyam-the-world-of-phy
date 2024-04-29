@@ -5,7 +5,7 @@ import Link from "next/link"
 const QuickContacts = ()=>{
     return(
         <div className={`body-wrapper justify-end ${styles.wrapper}`}>
-           <Link href="https://wa.me/+9199930005825"><div className={`${styles.icon} ${styles.wa} body-wrapper`}>
+           <Link href="https://wa.me/+919993005825"><div className={`${styles.icon} ${styles.wa} body-wrapper`}>
                 <BsWhatsapp />
             </div></Link>
             <Link href="tel:07314020339"><div className={`${styles.icon} ${styles.call} body-wrapper`}>
