@@ -42,9 +42,12 @@ const router = useRouter();
            <div className="body-wrapper justify-start">
             <button className="primary-btn blue" onClick={()=>{router.push("/ourCourses")}} style={{marginRight:"10px"}}>View Our Courses</button>
             </div>
-            <div style={{position:"relative", width:"100%", height:`${size.width<800?"200px":"600px"}`}}>
-            <Image onClick={()=>{router.push("/login")}} src={longBanner} fill={true} style={{objectFit:"contain"}} alt="some"/>
-          </div>
+            <Image src={longBanner}
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{margin:"20px 0", width: '100%', height: 'auto' }}
+              alt="some"/>
          <VideoHero />
           <h2 className="boldHeading center">Courses That We Offer</h2>
           <div className="body-wrapper">

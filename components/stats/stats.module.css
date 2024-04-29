@@ -22,3 +22,26 @@
 .text{
     font-size: 1.3rem;
 }
+
+@media only screen and (max-width:900px){
+    .number{
+        font-size: 3rem;
+    }
+
+    .card{
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width:900px){
+    .wrapper{
+        flex-direction: column !important;
+    }
+
+    .card{
+        border: none;
+        border-bottom: 1px solid #ffffff;
+        width: 100%;
+        padding: 20px 0;
+    }
+}

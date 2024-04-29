@@ -1,32 +1,5 @@
-.card{
-    width: 48%;
-    min-width: 600px;
-    margin: 10px 0;
-}
-
-
-
-.back{
-    background-color: var(--primary-blue);
-    opacity: 0.4;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 0;
-    position: absolute;
-    transform: rotate(20deg);
-}
-
-.text{
-    font-size: 15px;
-    margin-top: 20px;
-    text-align: center;
-    background-color: var(--light-yellow);
-    padding: 10px;
-    font-weight: 700;
-    z-index: 2;
-    border-radius:10px ;
+.wrap{ 
+     width: 48%;
 }
 
 .heading{
@@ -36,10 +9,9 @@
     width: 90%;
 }
 
-@media only screen and (max-width:656px){
-    .card{
-        min-width: auto;
-        margin: 20px;
-        width: 90%;
-    }
+@media only screen and (max-width:768px){
+   .wrap{
+    width: 90%;
+    margin: auto;
+   }
 }

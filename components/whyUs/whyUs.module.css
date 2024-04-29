@@ -17,6 +17,10 @@
     padding-left: 50px;
 }
 
+.column:last-child{
+    width: 40%;
+}
+
 .heading{
     font-size: 2.3rem;
     font-weight: 600;
@@ -35,6 +39,10 @@
     .column{
         width: 100%;
         margin: auto;
+    }
+
+    .column:last-child{
+        width: 80%;
     }
 
    .marginAuto{

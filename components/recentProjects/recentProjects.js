@@ -56,9 +56,9 @@ const InteriorProjects = () => {
        <div className={`${styles.imgwrapper} body-wrapper`}>
         {
             !isOnline ? imagesOffline.map((img , i)=>(
-                <div key={i} className={styles.img}><Image style={{borderRadius:"10px" , boxShadow:"10px 10px 20px #00000040"}} src={img} alt="course" height={500} width={500}/></div>
+                <div key={i} className={styles.img}><Image style={{borderRadius:"10px" , boxShadow:"10px 10px 20px #00000040" , width:"100%" , height:"auto"}} src={img} alt="course" height={0} width={0} sizes="100vw"/></div>
             )) : imagesOnline.map((img , i)=>(
-                <div key={i} className={styles.img}><Image style={{borderRadius:"10px" , boxShadow:"10px 10px 20px #00000040"}} src={img} alt="course" height={500} width={500}/></div>
+                <div key={i} className={styles.img}><Image style={{borderRadius:"10px" , boxShadow:"10px 10px 20px #00000040" , width:"100%" , height:"auto"}} src={img} alt="course" height={0} width={0} sizes="100vw"/></div>
             ))
         }
         </div>

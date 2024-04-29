@@ -15,7 +15,10 @@ const WhyUs = ()=>{
                 <button className="primary-btn white">Enroll Now</button>
             </div>
             <div className={styles.column}>
-             <div className={styles.marginAuto}>{size.width < 500 ?   <Image className={styles.img} src={feature} alt="features" width={400} height={"100%"}/>:   <Image className={styles.img} src={feature} alt="features" width={500} height={"100%"}/>}</div>
+             <Image className={styles.img} src={feature} width={0}
+            height={0}
+            sizes="100vw"
+            style={{margin:"20px 0", width: '100%', height: 'auto' }} alt="features"/>
             </div> 
         </div>
     )

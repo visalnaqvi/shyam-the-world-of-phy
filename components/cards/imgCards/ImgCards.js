@@ -10,14 +10,30 @@ const CardGallary = ({awards})=>{
         <div className="body-wrapper justify-between">
         {
             awards.map((award,i)=>(
-                <div key={i} className={`${styles.card} body-wrapper column`}>
-                    <div className={styles.imgWrapper}>
+               
+                    
 
-                    {size.width<656 ? <Image objectFit="cover" width={300} height={"100%"} style={{borderRadius:"10px"}} src={award} alt={"award"} />:<Image objectFit="cover" width={600} height={300} style={{borderRadius:"10px"}} src={award} alt={"award"} />}
-                    </div>
+       <div key={i} className={styles.wrap}>
+      <Image
+      
+        src={award}
+        width={0}
+        height={0}
+        alt="Picture of the author"
+        sizes="100vw"
+        style={{
+            width:"100%",
+            height:"auto",
+            marginBottom:"20px",
+            borderRadius:"10px",
+            boxShadow:"10px 10px 30px #00000070"
+        }}
+      />
+  
+              </div>                          
                     
                    
-                </div>
+           
             ))
         }
       </div>
