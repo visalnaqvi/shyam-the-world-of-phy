@@ -37,7 +37,7 @@ const InteriorProjects = () => {
             
             <div className={styles.content}>
                 <p className={styles.heading}>Our Courses</p>
-                <p className={styles.text}>Empowering Minds, Elevating Potential: Explore Our Comprehensive Physics Courses for Academic Excellence and Beyond.</p>
+                <p className={styles.text}>Empowering Minds, Elevating Potential: Explore Our Comprehensive Courses for Academic Excellence and Beyond.</p>
             </div>
             <div className={styles.shade}></div>
         </div>

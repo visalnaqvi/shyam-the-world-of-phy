@@ -8,13 +8,13 @@ const data =
 	},
 	{
 		heading:"Comprehensive Curriculum",
-		content:"At Shyam Institute, our meticulously designed curriculum covers every aspect of competitive physics exams. From fundamental concepts to advanced problem-solving techniques, we provide thorough preparation to empower students for success.",
+		content:"Our comprehensive curriculum covers all aspects of JEE and NEET exams, ensuring thorough preparation. Led by Director Neelesh Kumar Gupta, our expert faculty delivers top-notch instruction in every subject.",
 		img:"/services/knowledge.jpg",
 		direction:["row-reverse","column"],
 	},
 	{
 		heading:"Supportive Environment",
-		content:"We foster a supportive learning environment where students thrive. Our personalized attention, regular assessments, and interactive sessions ensure that each student receives the guidance and encouragement they need to excel in their physics journey.",
+		content:"We foster a supportive learning environment where students thrive. Our personalized attention, regular assessments, and interactive sessions ensure that each student receives the guidance and encouragement they need to excel in their acadmic journey.",
 		img:"/services/teamwork.jpg",
 		direction:["row","column"],
 	}
